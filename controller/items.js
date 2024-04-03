@@ -87,7 +87,8 @@ const itemControl = {
     addNewItems,
     getAllitems,
     updateItems,
-    deleteItems
+    deleteItems,
+    getById
 };
 
 module.exports = itemControl;
