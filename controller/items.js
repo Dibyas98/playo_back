@@ -66,6 +66,22 @@ const deleteItems = async(req,res)=>{
     }
 }
 
+const getById = async(req,res) =>{
+    try {
+        const result = await itemModel.findById(req.params.id);
+        res.json({
+            success: true,
+            message: "Items getID successfully",
+            result
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Failed to retrieve items"
+        });
+    }
+}
+
 
 const itemControl = {
     addNewItems,

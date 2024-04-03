@@ -6,5 +6,6 @@ router.post('',itemController.addNewItems)
 router.get('',itemController.getAllitems)
 router.patch('',itemController.updateItems)
 router.delete('',itemController.deleteItems)
+router.get('/:id',itemController)
 
 module.exports = router
