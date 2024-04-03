@@ -53,7 +53,7 @@ const updateItems = async(req,res)=>{
 }
 const deleteItems = async(req,res)=>{
     try {
-        await itemModel.findByIdAndDelete(req.query.id,req.body);
+        await itemModel.findByIdAndDelete(req.query.id);
         res.json({
             success: true,
             message: "Items update successfully",
